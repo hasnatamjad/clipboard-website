@@ -2,13 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h3 {
+    @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl;
+  }
+}
+
+.section-container {
+  @apply max-w-6xl mx-auto text-center;
+}
+
+.primary-button {
+  @apply bg-strongCyan p-3 px-8 rounded-full shadow-lg duration-200 hover:opacity-80;
+}
+
+.second-button {
+  @apply bg-lightBlue p-3 px-8 rounded-full shadow-lg duration-200 hover:opacity-80;
+}
 body {
   background-image: url("../images/bg-header-desktop.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-media(max-width: 576px) {
+@media (max-width: 576px) {
   body {
     background-image: url("../images/bg-header-mobile.png");
   }
